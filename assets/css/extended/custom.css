@@ -1,0 +1,20 @@
+/* PaperMod Profile Mode 头像：圆形 + hover 旋转 */
+.profile .profile_inner img {
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.profile .profile_inner img:hover {
+  transform: rotate(360deg);
+}
+
+/* About 页面社交图标 */
+.page-about img {
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.page-about a:hover img {
+  opacity: 1;
+}

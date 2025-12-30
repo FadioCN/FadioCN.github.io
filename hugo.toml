@@ -1,7 +1,21 @@
 baseURL = 'https://fadiocn.github.io/'
 languageCode = 'zh-CN'
 title = '发声电台Fadio'
+
+hasCJKLanguage = true
+
+
 theme = "PaperMod"
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.label]
+    text = "发声电台Fadio"           # 导航栏显示的文字
+    icon = "/img/avatar.png"      # 对应 static/img/icon.png，不要加 /static/ 前缀
+    iconHeight = 35            # 图标高度，单位默认是 px
+
 
 enableGitInfo = true
 enableRobotsTXT = true
@@ -38,6 +52,18 @@ defaultContentLanguage = "zh"
     weight = 4
 
   [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+
+  [[menu.main]]
     identifier = "rss"
     name = "RSS"
     url = "/index.xml"
@@ -46,13 +72,13 @@ defaultContentLanguage = "zh"
 
 # PaperMod 核心参数
 [params]
-  logo = "/images/avatar.png"
 
   mainSections = ["posts"]
   
   # —— 站点简介（SEO / RSS / 分享摘要）——
   # description = "记录技术、商业与长期思考的个人博客"
-  # keywords = ["Hugo", "PaperMod", "博客", "写作"]
+  # keywords = ["打工", "财政", "成长", "写作"]
+  
   author = "路发"
 
   # —— 主题外观 ——
@@ -67,27 +93,44 @@ defaultContentLanguage = "zh"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-
   ShowToc = true
-  TocOpen = true  
+  TocOpen = true
   
+  ShowSearchKey = true
+
+
+
   # —— 列表页信息 ——
   ShowRssButtonInSectionTermList = true
+
+  ShowFooter = false
 
   # =================================================
   # 社交账号（PaperMod 官方方式）
   # =================================================
-  socialIcons = [
-    { name = "email", url = "mailto:ofa_@email.com" }
-#    { name = "rss", url = "index.xml" }
+ socialIcons = [
+    { name = "email", url = "mailto:ofa_@email.com" },
+    { name = "github", url = "https://github.com/fadiocn" },
+    { name = "podcast", url = "https://www.xyzfm.link/3a8cr" },
+    { name = "rss", url = "index.xml" }
     ]
 
-# { name = "github" ,     url = "https://github.com/fadiocn" },
+  
+
+#{ name = "github" ,     url = "https://github.com/fadiocn" }
 # { name = "linkedin" ,   url = "https://www.linkedin.com/in/yourname/" }
 # { name = "twitter" ,    url = "https://twitter.com/yourname" }
 
 # =====================================================
 # RSS 配置（Hugo 默认开启，这里是增强）
 # =====================================================
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+
+
+#[params.profileMode]
+#  enabled = false
+#  title = "路发"
+#  subtitle = "我的博客 / 注释"
+#  imageUrl = "/img/avatar.png"
+#  imageTitle = "头像"
+#  imageWidth = 120
+#  imageHeight = 120
