@@ -4,7 +4,6 @@ title = '发声电台Fadio'
 
 hasCJKLanguage = true
 
-
 theme = "PaperMod"
 
 
@@ -103,7 +102,7 @@ defaultContentLanguage = "zh"
   # —— 列表页信息 ——
   ShowRssButtonInSectionTermList = true
 
-  ShowFooter = false
+  ShowFooter = true
 
   # =================================================
   # 社交账号（PaperMod 官方方式）
